@@ -15,10 +15,12 @@
   padding: 0;
   margin: 0;
 }
+
 .max-width {
   margin: auto;
   max-width: 1200px;
 }
+
 body {
   font-size: var(--main-font-size);
   font-family: var(--font-style);
@@ -174,6 +176,7 @@ article h2 {
 .events table {
   width: 100%;
   border-collapse: collapse;
+  margin: 2rem 0;
 }
 
 .events th,
@@ -249,4 +252,84 @@ footer {
   font-weight: 500;
   text-align: center;
   margin: 0;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+@media screen and (max-width: 480px) {
+  header {
+    display: none;
+  }
+  .udc-logo img {
+    width: 100px;
+  }
+  .coloquio-logo-container img {
+    width: 250px;
+  }
+
+  .button-register {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--green);
+    font-weight: bold;
+    transition: none;
+  }
+
+  .company-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main {
+    margin: 0 2rem;
+    text-align: justify;
+  }
+  article h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--green-light);
+  }
+
+  section p {
+    font-size: 18px;
+  }
+
+  .company-container img {
+    width: 150px;
+  }
+  .table-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .colaborador img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+  }
+
+  .colaborador h3 {
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #1f1f1f;
+    text-align: center;
+    color: var(--white);
+    font-size: 12px;
+  }
+  footer img {
+    width: 12px;
+  }
 }
