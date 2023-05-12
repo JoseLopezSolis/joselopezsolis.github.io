@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div id="background" class="background"></div>
     <header>
       <div class="white-bar">
         <div class="max-width">
@@ -23,9 +24,17 @@
               <a href="#eventos">
                 <li>Eventos</li>
               </a>
+              <a href="#entrevistas-reclutamientos">
+                <li>Entrevistas y reclutamientos</li>
+              </a>
               <a href="#comite">
                 <li>Comité organizador</li>
               </a>
+              <button id="registrarse" class="register-button">Registrarse</button>
+                <ul id="options" class="option-register">
+                 <a href="#"><li>Alumno</li></a> 
+                 <a href="#"><li>Egresado</li></a> 
+                </ul>
             </ul>
           </nav>
         </div>
@@ -41,7 +50,7 @@
       <img src="./Images/University/logoColoquio.png" alt="" />
     </div>
 
-    <div class="button-register-container content-image-container">
+    <div class="button-register-container content-image-container hidden">
       <div class="content-image button-register">
         <a href="">REGISTRARSE</a>
       </div>
@@ -114,10 +123,13 @@
               <img src="./Images/Companies/nebusens.png" alt="nebusens" />
             </div>
             <div class="company-container">
-              <img src="./Images/Companies/Codificadas.jpg" />
+              <img src="./Images/Companies/Codificadas.jpg" alt="Codificadas"/>
             </div>
             <div class="company-container">
-              <img src="./Images/Companies/hyper-ox.png" />
+              <img src="./Images/Companies/hyper-ox.png" alt="hyper-ox" />
+            </div>
+            <div class="company-container">
+              <img src="./Images/Companies/grupo-carrix.png" alt="grupo-carrix" />
             </div>
           </div>
         </article>
@@ -297,20 +309,29 @@
                 <tr>
                   <td>Conferencia
                     técnica</td>
+                  <td>OCUPA grupo Carrix</td>
+                  <td>10:00</td>
+                  <td>Lic. Luz Flores Ríos<br/> Coordinadora de reclutamiento</td>
+                  <td>FIME-Auditorio principal</td>
+                </tr>
+                <tr>
+                  <td>Conferencia
+                    técnica</td>
                   <td>MEGACABLE</td>
                   <td>10:00</td>
                   <td>Ing. Antonio Valverde</td>
                   <td>FIME-Auditorio principal</td>
                 </tr>
                 <tr>
-                  <td>Conferencia
-                    técnica</td>
+                  <td>La Importancia de
+                    la Industria en la
+                    Universidad</td>
                   <td>FLEX México</td>
-                  <td>11:00 a 12:00hrs.</td>
+                  <td>11:00</td>
                   <td class="ponente">
                       <img src="./Images/ponentes/flex-ponente.jpg">
                       <span>
-                      <br/>C. Luis Alonzo Arcadia Lizaola <br/>Operation Training Manager -Flex<br/><br/>Chelsea Ortiz
+                      <br/>C. Luis Alonzo Arcadia Lizaola <br/>Operation Training Manager -Flex<br/><br/>
                       </span>
                   </td>
                   <td>FIME-Auditorio principal</td>
@@ -320,7 +341,7 @@
           </div>
         </section>
 
-        <h2 id="eventos">Entrevistas y reclutamientos</h2>
+        <h2 id="entrevistas-reclutamientos">Entrevistas y reclutamientos</h2>
         <div class="events">
           <div class="table-wrapper">
           <table>
@@ -359,6 +380,17 @@
                   Ciencia de Datos</td>
               </tr>
               <tr>
+                <td>Miércoles 7 de
+                  junio</td>
+                <td>13:00 a 15:00 hrs.</td>
+                <td>Soluciones y
+                  Servicios en
+                  Ingeniería</td>
+                <td>FIME- Cubículos
+                  Laboratorio de
+                  Ciencia de Datos</td>
+              </tr>
+              <tr>
                 <td>Jueves 8 de junio</td>
                 <td>12:00 a 15:00 hrs.</td>
                 <td>CAMPOVERDE</td>
@@ -377,15 +409,22 @@
               <tr>
                 <td>Viernes 9 de junio</td>
                 <td>12:00 a 15:00 hrs.</td>
-                <td>MEGACABLE</td>
-                <td>FIME- Cubículos
-                  Laboratorio de
-                  Ciencia de Datos</td>
+                <td>FLEX México</td>
+                <td>FIME- Laboratorio
+                  de Mecatrónica</td>
               </tr>
               <tr>
                 <td>Viernes 9 de junio</td>
                 <td>12:00 a 15:00 hrs.</td>
-                <td>FLEX México</td>
+                <td>MEGACABLE</td>
+                <td>FIME- Laboratorio
+                  de Mecatrónica</td>
+              </tr>
+              
+              <tr>
+                <td>Viernes 9 de junio</td>
+                <td>12:00 a 15:00 hrs.</td>
+                <td>OCUPA grupo Carrix</td>
                 <td>FIME- Cubículos
                   Laboratorio de
                   Ciencia de Datos</td>
@@ -405,7 +444,7 @@
             </div>
             <div class="colaborador">
               <img src="./Images/Comite/Martha.jpg" alt="" />
-              <h3 class="name">Mrta. Martha E. Evangelista Salazar</h3>
+              <h3 class="name">M. en C. Martha Elizabeth Evangelista Salazar</h3>
 
             </div>
             <div class="colaborador">
@@ -423,5 +462,7 @@
         2023 Universidad de Colima - Facultad de Ingenieria Mecanica y Electrica
       </p>
     </footer>
+    <script src="./js/app.js
+    "></script>
   </body>
 </html>
