@@ -24,17 +24,6 @@ background.addEventListener("click", (e) => {
 });
 
 //CODE TO DISPLAY THE BUTTON IN MOBILE
-// Verificar si se trata de un dispositivo móvil al cargar la página
-window.addEventListener("load", function () {
-  if (isMobileDevice()) {
-    buttonRegister.classList.remove("hidden");
-  }
+window.addEventListener("resize", function () {
+  console.log(this.document.body.offsetWidth);
 });
-
-// Función para verificar si se trata de un dispositivo móvil
-function isMobileDevice() {
-  return (
-    typeof window.orientation !== "undefined" ||
-    navigator.userAgent.indexOf("IEMobile") !== -1
-  );
-}
