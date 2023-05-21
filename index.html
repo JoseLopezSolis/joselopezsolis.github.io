@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
-      <div class="white-bar">
+    <header class="white-bar">
+      <div>
         <div class="max-width">
           <nav>
             <ul>
@@ -66,7 +66,7 @@
 
     <main>
       <section>
-        <artic> 
+        <article> 
           <p>
             La Facultad de Ingeniería Mecánica y Eléctrica, extiende una cordial
             invitación a participar en el
@@ -76,14 +76,14 @@
             estancia profesional o laboral.
           </p>
         </br>
-          <p>
+          <p id="objetivo">
             El evento va dirigido a alumnos(as) y egresados(as) de la facultad,
             y se llevará a cabo del 7 al 9 de junio del presente año.
           </p>
         </article>
 
         <article>
-          <h2 id="objetivo">Objetivo general</h2>
+          <h2 >Objetivo general</h2>
           <p>
             El objetivo del Coloquio es proporcionar un entorno propicio para que los estudiantes que están a punto de graduarse conozcan las ventajas que ofrecen las empresas, identifiquen oportunidades en el ámbito de estancias profesionales o empleo, y comprendan los procedimientos necesarios para ser admitidos en dichas organizaciones.
             <br/>
@@ -91,12 +91,15 @@
             Además, el Coloquio busca fomentar la interacción entre los estudiantes y las empresas, promoviendo un espacio de networking donde puedan establecer contactos y relaciones profesionales que pueden resultar favorables para su desarrollo futuro.
             <br/>
             <br/>
+          <div  id="empresas"></div>
+          <p>
             Durante el evento, se llevarán a cabo presentaciones por parte de representantes de diferentes empresas, quienes compartirán información sobre sus programas de estancias profesionales, oportunidades laborales, requisitos de selección y el proceso de solicitud.
+          </p>
 
           </p>
-        </article>
+        </article >
 
-        <article id="empresas">
+        <article>
           <h2>Empresas participantes</h2>
           <div class="company-section">
             <div class="company-container">
@@ -138,14 +141,17 @@
             <div class="company-container">
               <img src="./Images/Companies/hyper-ox.png" alt="hyper-ox" />
             </div>
-          </div>
-          <div class="company-container-center">
-            <img src="./Images/Companies/grupo-carrix.png" alt="grupo-carrix" />
+            <div class="company-container">
+              <img src="./Images/Companies/FORENTEC.jpg" alt="FORENTEC" />
+            </div>
+            <div class="company-container" >
+              <img src="./Images/Companies/grupo-carrix.png" alt="grupo-carrix" />
+            </div>
           </div>
         </article>
 
         <article class="eventos">
-          <h2 id="eventos">Eventos</h2>
+          <h2 >Eventos</h2>
           <h3>7 de junio </br>Auditorio principal FIME</h3>
           <section class="events">
             <div class="table-wrapper">
@@ -162,10 +168,11 @@
               <tbody>
                 <tr>
                   <td>INAUGURACIÓN</td>
-                  <td>09:30</td>
+                  <td>09:00</td>
                   <td></td>
                   <td></td>
-                  <td>Uriel Mora Quiñones</td>
+                  <td>Jesús Uriel Mora
+                    Quiñones</td>
                 </tr>
                 <tr>
                   <td>Conferencia
@@ -173,7 +180,8 @@
                   <td>10:00</td>
                   <td>BeeckerCo</td>
                   <td>María Inés González Podesta de Leonhardt</td>
-                  <td>Uriel Mora Quiñones</td>
+                  <td>Jesús Uriel Mora
+                    Quiñones</td>
                 </tr>
                 <tr>
                   <td>RECESO</td>
@@ -213,18 +221,15 @@
                   <td>Hyper-OX y la Importancia de la Ciberseguridad</td>
                   <td>12:30</td>
                   <td>Hyper-Ox</td>
-                  <td> Ing. Alejandro Tinoco</td>
-                  <td></td>
+                  <td class="ponente">
+                    <img src="./Images/ponentes/Alejandro Tinoco.jpg">
+                    <span> 
+                      Hugo Hernández 
+                    </span> 
+                  </td>
+                  <td>Carlos Alberto
+                    Torres Cantero</td>
                 </tr>
-                <tr>
-                  <td>SSI en Empresa Cementera</td>
-                  <td>13:00</td>
-                  <td>Soluciones y Servicios en
-                    Ingeniería</td>
-                  <td>José de Jesús Huerta</td>
-                  <td></td>
-                </tr>
-                <!-- Add more rows for additional events -->
               </tbody>
             </table>
           </div>
@@ -246,12 +251,18 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Conferencia
-                      técnica</td>
+                    <td>Desarrollo de competencias
+                      globales</td>
                     <td>09:30</td>
                     <td>Sociedad de egresados – FIME</td>
-                    <td>Ing. Luis Moreno</td>
-                    <td></td>
+                    <td class="ponente">
+                      <img src="./Images/ponentes/Luis Moreno.jpg">
+                      <span> 
+                        Luis Moreno
+                      </span> 
+                    </td>
+                    <td>Jesús Uriel Mora
+                      Quiñones</td>
                   </tr>
                   <tr>
                     <td> Sistemas de localizacion y sensorización</td>
@@ -263,7 +274,8 @@
                         Dr. Dante Israel Tapia Martínez
                       </span> 
                     </td>
-                    <td></td>
+                    <td>Martha Xóchitl Nava
+                      Bautista</td>
                   </tr>
                   <tr>
                     <td>RECESO</td>
@@ -273,8 +285,11 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td>Conferencia
-                      técnica</td>
+                    <td>De la Universidad al Mundo
+                      Real: Cómo mi formación en
+                      Ingeniería en Sistemas me
+                      preparó para mi carrera en
+                      EPAM.</td>
                     <td>11:00</td>
                     <td>EPAM</td>
                     <td class="ponente">
@@ -282,7 +297,8 @@
                       <span> 
                         Héctor Francisco Paulino 
                       </span> </td>
-                    <td></td>
+                    <td>Oswaldo Carrillo
+                      Zepeda</td>
                   </tr>
                   <tr>
                     <td>Campoverde, más
@@ -294,7 +310,8 @@
                       <spa>
                       <br/>Ing. Elías Alfonso Lizjuan Olvera </br>
                     </td>
-                    <td></td>
+                    <td>Oswaldo Carrillo
+                      Zepeda</td>
                   </tr>
                   <tr>
                     <td>Conferencia
@@ -304,7 +321,7 @@
                     <td>
                      Claudia Patricia Godínez Calzada
                     </td>
-                    <td></td>
+                    <td>Laura Sanely Gaytán Lugo</td>
                   </tr>
                 </tbody>
               </table>
@@ -327,16 +344,17 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Conferencia
-                    técnica</td>
-                  <td>10:00</td>
-                  <td>OCUPA grupo Carrix</td>
-                  <td>Lic. Luz Flores Ríos<br/> Coordinadora de reclutamiento</td>
-                  <td></td>
+                  <td>SSI en Empresa Cementera</td>
+                  <td>9:00</td>
+                  <td>Soluciones y Servicios en
+                    Ingeniería</td>
+                  <td>José de Jesús Huerta Ángulo</td>
+                  <td>Jesús Uriel Mora
+                    Quiñones</td>
                 </tr>
                 <tr>
                   <td>Introducción al mundo de la ciberseguridad</td>
-                  <td>10:00</td>
+                  <td>10:15</td>
                   <td>MEGACABLE</td>
                   <td class="ponente">
                     <img src="./Images/ponentes/Edgar Andrade.png">
@@ -345,11 +363,12 @@
                   </td>
                   <td></td>
                 </tr>
+                <div id="entrevistas-reclutamientos"></div>
                 <tr>
                   <td>La Importancia de
                     la Industria en la
                     Universidad</td>
-                  <td>11:00</td>
+                  <td>11:15</td>
                   <td>FLEX México</td>
                   <td class="ponente">
                       <img src="./Images/ponentes/flex-ponente.jpg">
@@ -359,12 +378,26 @@
                   </td>
                   <td></td>
                 </tr>
+                <tr>
+                  <td>Importancia de la seguridad de
+                    tus datos digitales</td>
+                  <td>12:00</td>
+                  <td>FORENTEC</td>
+                  <td class="ponente">
+                      <img src="./Images/ponentes/Karina Elizabeth_FORENTEC.jfif">
+                      <span>
+                      <br/>Karina Elizabeth Michel Casillas<br/>
+                      </span>
+                  </td>
+                  <td></td>
+                </tr>
               </tbody>
-            </table>
+            </table >
+
           </div>
         </section>
 
-        <h2 id="entrevistas-reclutamientos">Entrevistas y reclutamientos</h2>
+        <h2 >Entrevistas y reclutamientos</h2>
         <div class="events">
           <div class="table-wrapper">
           <table>
@@ -444,7 +477,7 @@
                   de Mecatrónica</td>
               </tr>
               
-              <tr>
+              <tr id="comite">
                 <td>Viernes 9 de junio</td>
                 <td>12:00 a 15:00 hrs.</td>
                 <td>OCUPA grupo Carrix</td>
@@ -456,8 +489,8 @@
           </table>
         </div>
        
-        <article id="comite">
-            <h2 id="eventos">Comité organizador</h2>
+        <article >
+            <h2>Comité organizador</h2>
           <section class="colaboradores">
             <div class="colaborador">
               <img src="./Images/Comite/Victor.jpg" alt="" />
