@@ -256,14 +256,42 @@ article h2 {
 }
 
 footer {
+  padding: 4rem 0;
+  width: 100%;
+  height: auto;
+  background-color: #1f1f1f;
+  color: var(--white);
+  text-align: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 200px;
-  background-color: #1f1f1f;
-  text-align: center;
-  color: var(--white);
+}
+
+.sponsors-images {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+.university-images {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.university-images img {
+  width: auto;
+  height: 150px;
+  opacity: 0.5;
+}
+
+.sponsors-images img {
+  width: auto;
+  height: 50px;
+  opacity: 0.5;
 }
 
 .registered {
@@ -415,11 +443,40 @@ footer .school-image {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: auto;
     background-color: #1f1f1f;
     text-align: center;
     color: var(--white);
     font-size: 12px;
+  }
+
+  .first-section {
+    margin: 0 1rem;
+  }
+
+  .sponsors-images {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .university-images {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .university-images img {
+    width: auto;
+    height: 100px;
+    opacity: 0.5;
+  }
+
+  .sponsors-images img {
+    width: auto;
+    height: 50px;
+    opacity: 0.5;
   }
   footer img {
     width: 12px;
