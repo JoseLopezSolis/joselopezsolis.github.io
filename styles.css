@@ -281,8 +281,13 @@ footer {
 .university-images {
   padding: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   gap: 2rem;
+}
+#registered {
+  width: 20px;
+  height: 20px;
 }
 
 .university-images img {
