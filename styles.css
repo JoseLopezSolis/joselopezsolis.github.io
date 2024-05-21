@@ -70,8 +70,12 @@ header {
 
 .option-register {
   position: relative;
-  top: 3rem;
+  top: 5rem;
   left: -10em;
+}
+
+#egresado_link {
+  padding: 2rem;
 }
 
 .grid-column {
@@ -134,8 +138,13 @@ nav ul li:hover {
 
 .coloquio-logo-container {
   margin-top: 2rem;
-  display: flex;
+  display: grid;
+  align-items: center;
   justify-content: center;
+}
+
+.empleadores {
+  margin-top: 5rem;
 }
 
 .coloquio-logo-container img {
