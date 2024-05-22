@@ -1,3 +1,5 @@
+const logoContainerUDC = document.getElementById("logoContainerUDC");
+
 //CODE TO DISPLAY THE BUTTON IN PC
 const buttonRegister = document.getElementById("registrarse");
 const options = document.getElementById("options");
@@ -65,8 +67,8 @@ mobileButton.addEventListener("click", function (e) {
 //Code to fix navbar
 window.addEventListener("scroll", function () {
   if (window.scrollY > 0) {
-    navbar.classList.add("fixed");
+    logoContainerUDC.classList.add("collapsed");
   } else {
-    navbar.classList.remove("fixed");
+    logoContainerUDC.classList.remove("collapsed");
   }
 });

@@ -4,7 +4,7 @@
   --h1-font-size: 50px;
   --h2-font-size: 35px;
   --font-style: "Poppins", sans-serif;
-  --header-background: #000;
+  --header-background: #fefefe;
   --white: #fff;
   --green: #046818;
   --green-light: #007b19c4;
@@ -14,6 +14,25 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+
+  scrollbar-width: thin;
+  scrollbar-color: #007b1956 transparent;
+}
+
+/* ################## Elementos navegador ################## */
+::-webkit-scrollbar-thumb {
+  background-color: #007b1956;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
 .hidden {
@@ -41,82 +60,63 @@ body {
   overflow-x: hidden;
 }
 
+/* #################### Header #################### */
 header {
-  width: 100%;
-  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  background-color: var(--header-background);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 100%;
   z-index: 200;
 }
 
-.register-button {
-  position: relative;
-  border-radius: 1.2rem;
-  color: #fff;
-  padding: 0.5rem 3rem;
-  color: #2e2e2ebb;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: var(--font-style);
-  background-color: #41e600;
-  outline: none;
-  border: none;
-  margin-top: 2.6rem;
-}
-
-.register-button:hover {
-  cursor: pointer;
-}
-
-.option-register {
-  position: relative;
-  top: 5rem;
-  left: -10em;
-}
-
-#egresado_link {
-  padding: 2rem;
-}
-
-.grid-column {
-  display: flex;
-  flex-direction: column;
-}
-.fix-text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.white-bar {
-  width: 100%;
-  height: 100px;
-}
-nav a {
-  text-decoration: none;
-}
-
-nav ul {
+nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-nav ul li {
+/* #################### Enlaces #################### */
+nav a {
+  text-decoration: none;
   position: relative;
-  bottom: -50px;
-  list-style: none;
   color: #2e2e2ebb;
   font-weight: bold;
-  font-size: 19px;
 }
 
-nav ul li:hover {
-  text-decoration: underline;
-  color: #000000bb;
+nav a::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s;
+  bottom: 0;
+  left: 0;
 }
 
+nav a:hover::after {
+  width: 100%;
+}
+
+/* #################### Logo UDC #################### */
 .udc-logo-container {
-  margin-top: 0.03rem;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 100%;
+  /* centrar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 190;
+  max-height: 250px;
+  transition: opacity 0.3s ease-in-out;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.udc-logo-container.collapsed {
+  opacity: 0;
 }
 
 .udc-logo {
@@ -124,11 +124,10 @@ nav ul li:hover {
   justify-content: center;
   border-bottom-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
-  background-color: #fff;
+  background-color: var(--header-background);
   padding: 0.5rem 3rem;
-  z-index: 50;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border: #00000088 1px solid;
+  border-top: none ;
 }
 
 .udc-logo img {
@@ -136,64 +135,60 @@ nav ul li:hover {
   cursor: pointer;
 }
 
-.coloquio-logo-container {
-  margin-top: 2rem;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+/* #################### Boton de registro #################### */
+.register-button {
+  position: relative;
+  border-radius: 8px;
+  padding: 8px 24px;
+  color: #2e2e2ebb;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #41e600;
+  outline: none;
+  border: none;
 }
 
-.empleadores {
-  margin-top: 5rem;
+.register-button:hover {
+  background-color: #91f769;
+  cursor: pointer;
+}
+
+/* #################### Opciones de registro #################### */
+#navRegisterWrapper {
+  position: relative;
+}
+
+#navRegisterWrapper #options{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: #ddd;
+  top: calc(100% + 10px);
+  right: 0;
+  padding: 8px 16px;
+  border-radius: 8px 0 8px 8px;
+  border: #00000088 1px solid;
+}
+
+#options a{
+  display: block;
+}
+
+/* #################### Imagenes Top #################### */
+.coloquio-logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 124px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
 .coloquio-logo-container img {
   width: 350px;
 }
 
-.content-image-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.content-image {
-  position: relative;
-}
-
-.content-image h1 {
-  font-size: var(--h1-font-size);
-  text-align: center;
-  color: #fff;
-}
-
-.button-register {
-  opacity: 90%;
-  margin-top: 100px;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  background-color: var(--green);
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.button-register:hover {
-  opacity: 100%;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px,
-    rgba(255, 255, 255, 0.22) 0px 15px 12px;
-}
-
-.button-registro-container {
-  margin: 2rem 0 4rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-.button-register a {
-  color: #fefefe;
-  text-decoration: none;
-}
-
+/* #################### Contenido principal #################### */
 main {
   max-width: 1300px;
   margin: auto;
@@ -220,12 +215,18 @@ article h2 {
 }
 
 .company-section {
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
   width: 100%;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(5, 1fr);
 }
+
+.company-container{
+  display: flex;
+  align-items: center;
+}
+
 
 .company-container img {
   width: 200px;
@@ -233,6 +234,10 @@ article h2 {
 
 .ponente {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .eventos h3 {
@@ -260,8 +265,8 @@ article h2 {
 
 .events td img {
   margin: 1rem;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -367,23 +372,71 @@ footer .school-image {
   margin: 0 2rem;
   opacity: 0.4;
 }
+
+@media screen and (max-width: 1100px){
+  nav {
+    overflow-x: auto;
+    gap: 16px;
+    white-space: nowrap;
+  }
+}
+
 @media screen and (max-width: 480px) {
-  header {
+  header nav{
     display: none;
   }
+
   .udc-logo img {
     width: 100px;
   }
+
+  .coloquio-logo-container {
+    margin-top: 80px;
+  }
+  
   .coloquio-logo-container img {
     width: 250px;
   }
 
-  .button-register {
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    background-color: var(--green);
+  /* #################### Opciones de registro #################### */
+  .button-registro-container {
+    margin-top: 32px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+
+  .button-registro-container #options-mobile{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: #ddd;
+    top: calc(100% + 10px);
+    padding: 8px 16px;
+    border-radius: 0 0 8px 8px;
+    border: #00000088 1px solid;
+  }
+
+  #options-mobile a {
+    text-decoration: none;
+    position: relative;
+    color: #2e2e2ebb;
     font-weight: bold;
-    transition: none;
+  }
+  
+  #options-mobile a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #options-mobile a:hover::after {
+    width: 100%;
   }
 
   .company-section {
