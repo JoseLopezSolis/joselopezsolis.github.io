@@ -74,10 +74,6 @@ header {
   left: -10em;
 }
 
-#egresado_link {
-  padding: 2rem;
-}
-
 .grid-column {
   display: flex;
   flex-direction: column;
